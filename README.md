@@ -4,12 +4,26 @@ Terraform / OpenTofu module for storing Terraform / OpenTofu state in AWS S3 buc
 
 ## Usage
 
+### Create resources
+
 ```terraform
 module "tf_state" {
     source  = "voidsolutionsorg/tf-state/aws"
     version = "1.0.0"
 
     project_name = "example"
+}
+```
+
+### Setup backend configuration
+```terraform
+terraform {
+  backend "s3" {
+    bucket         = "example-tf-state"
+    key            = "myapp/production/tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "example-tf-state-lock"
+  }
 }
 ```
 
