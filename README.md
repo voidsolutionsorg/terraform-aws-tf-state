@@ -6,7 +6,7 @@ Terraform / OpenTofu module for storing Terraform / OpenTofu state in AWS S3 buc
 
 ```terraform
 module "tf_state" {
-    source  = "voidsolutionsorg/tf-state/aws
+    source  = "voidsolutionsorg/tf-state/aws"
     version = "1.0.0"
 
     project_name = "example"
