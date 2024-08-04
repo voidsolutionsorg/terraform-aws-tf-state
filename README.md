@@ -23,6 +23,7 @@ terraform {
     key            = "myapp/production/tfstate"
     region         = "us-east-1"
     dynamodb_table = "example-tf-state-lock"
+    encrypt        = true
   }
 }
 ```
@@ -32,7 +33,7 @@ terraform {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
 
 ## Providers
@@ -73,7 +74,7 @@ No outputs.
 
 ## Authors
 
-Module is maintained by [Aleksa Siriški](https://github.com/aleksasiriski) with help from [VoidSolutions Team](https://github.com/voidsolutionsorg).
+Module is maintained by [Aleksa Siriški](https://github.com/aleksasiriski) with help from the [VoidSolutions team](https://github.com/voidsolutionsorg).
 
 ## License
 
