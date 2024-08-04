@@ -23,6 +23,7 @@ terraform {
     key            = "myapp/production/tfstate"
     region         = "us-east-1"
     dynamodb_table = "example-tf-state-lock"
+    encrypt        = true
   }
 }
 ```
